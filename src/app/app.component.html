@@ -1,0 +1,20 @@
+<div class="div-body" *ngIf="router.url !== '/add-card'">
+  <mat-card class="main-card">
+    <mat-card-header style="display: flex; justify-content: center;padding-bottom: 15px;">
+      <mat-card-title>Recently Added Card</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <h3>Credit Card Number: {{ creditCardDetails.creditCardNumber }}</h3>
+      <h3>Card Holder: {{ creditCardDetails.cardHolder }}</h3>
+      <h3>Expiration Date: {{ creditCardDetails.expirationDate }}</h3>
+      <h3>Security Code: {{ creditCardDetails.securityCode }}</h3>
+      <h3>Amount: {{ creditCardDetails.amount==0 ? 'N/A': creditCardDetails.amount }}</h3>
+    </mat-card-content>
+    <mat-card-actions style="display: flex; justify-content: center">
+      <button color="primary" routerLink="/add-card" mat-raised-button>
+        ADD NEW CARD
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<router-outlet></router-outlet>
